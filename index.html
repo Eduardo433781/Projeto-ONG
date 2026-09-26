@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Esperança</title>
+</head>
+
+<body>
+    <header>
+        <img src="https://media.gettyimages.com/id/2171791895/pt/foto/close-up-of-volunteers-with-hands-stacked-during-donation-event-outdoors.jpg?s=612x612&w=0&k=20&c=oVgO53VbPGv_8m14W7Z9CKgkUuJC1VFOaH1xZYYqB2g=" alt="Logo da ONG Esperança">
+        <h1>ONG Esperança</h1>
+    </header>
+
+    <section>
+        <h2>Sobre Nós</h2>
+        <p>A ONG Esperança é dedicada a ajudar comunidades carentes, oferecendo suporte educacional, social e de saúde.
+        </p>
+    </section>
+
+    <main>
+        <h2>missão</h2>
+        <p>Nossa missão é promover a inclusão social e melhorar a qualidade de vida das pessoas</p>
+        <h3>Valores</h3>
+        <ul>
+            <li>Solidariedade</li>
+            <li>Transparência</li>
+            <li>Compromisso</li>
+            <li>Respeito</li>
+        </ul>
+    </main>
+
+    <form>
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="email">email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="data-nascimento">Data de nascimento:</label><br>
+            <textarea id="data-nascimento" name="data-nascimento" rows="4" cols="50" required></textarea><br><br>
+
+            <input type="submit" value="Enviar">
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+            <label for="endereco">Endereço:</label>
+            <input pattern="[0-9]{5}-[0-9]{3}" type="text" id="endereco" name="endereco" required><br><br>
+
+                <label for="cidade">Cidade:</label>
+                <input pattern="[A-Za-z\s]+" type="text" id="cidade" name="cidade" required><br><br>
+
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select><br><br>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 ONG Esperança. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
