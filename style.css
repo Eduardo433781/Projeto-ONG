@@ -2,21 +2,6 @@ body {
     background-color: rgb(3, 66, 55);
     color: rgb(251, 246, 246);
     font-family: Arial, sans-serif;
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-fieldset {
-    border: 1px solid rgb(251, 246, 246);
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
@@ -45,23 +30,138 @@ form {
     gap: 20px;
 }
 
+nav {
+    grid-column: 2 / 12;
+    background-color: rgb(3, 66, 55);
+    padding: 10px;
+}
+
 footer {
     grid-column: 2 / 12;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+fieldset {
+    border: 1px solid rgb(251, 246, 246);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    background-color: #333;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #333;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+
+/* HAMBÚRGUER */
+
+.menu-icon {
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
 }
 
 @media (max-width: 768px) {
+
     body {
         grid-template-columns: 1fr;
+    }
+
+    .menu-icon {
+        display: block;
+        padding: 15px;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #menu-toggle:checked~.menu {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        text-align: center;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+    }
+
+    .dropdown:hover .submenu {
+        display: block;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1440px) {
+
     body {
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media (min-width: 1200px) {
+
     body {
         grid-template-columns: repeat(12, 1fr);
     }
@@ -85,11 +185,4 @@ footer {
     footer {
         grid-column: 1 / -1;
     }
-}
-
-.info-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
