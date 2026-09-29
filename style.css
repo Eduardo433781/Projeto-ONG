@@ -3,6 +3,7 @@ body {
     color: rgb(251, 246, 246);
     font-family: Arial, sans-serif;
 }
+
 footer {
     text-align: center;
     margin-top: 20px;
@@ -13,4 +14,63 @@ fieldset {
     border: 1px solid rgb(251, 246, 246);
     padding: 10px;
     margin-bottom: 20px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+section {
+    grid-column: 1 / 12;
+}
+
+main {
+    grid-column: 1 / 12;
+}
+
+form {
+    grid-column: 1 / 12;
+}
+
+footer {
+    grid-column: 1 / 12;
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+    body {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    section,
+    main,
+    form,
+    footer {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1440px) {
+
+    section,
+    main,
+    form,
+    footer {
+        grid-column: 1 / -1;
+    }
 }
