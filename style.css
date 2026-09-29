@@ -72,7 +72,7 @@ fieldset {
     position: relative;
 }
 
-.menu {
+.menu a {
     display: block;
     padding: 15px 20px;
     color: white;
@@ -128,7 +128,7 @@ fieldset {
         align-items: stretch;
     }
 
-    #menu-toggle:checked~.menu {
+    #menu-toggle:checked ~ .menu {
         display: flex;
     }
 
