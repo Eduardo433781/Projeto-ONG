@@ -3,19 +3,16 @@ body {
     color: rgb(251, 246, 246);
     font-family: Arial, sans-serif;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 1fr;
 }
 
-header {
-    grid-column: 4 / 12;
-}
-
-section {
-    grid-column: 2 / 12;
-}
-
-main {
-    grid-column: 2 / 12;
+header,
+nav,
+section,
+main,
+form,
+footer {
+    grid-column: 1 / -1;
 }
 
 ul {
@@ -24,20 +21,17 @@ ul {
 }
 
 form {
-    grid-column: 4 / 12;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
 nav {
-    grid-column: 2 / 12;
     background-color: rgb(3, 66, 55);
     padding: 10px;
 }
 
 footer {
-    grid-column: 2 / 12;
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
@@ -109,10 +103,6 @@ fieldset {
 
 @media (max-width: 768px) {
 
-    body {
-        grid-template-columns: 1fr;
-    }
-
     .menu-icon {
         display: block;
         padding: 15px;
@@ -150,7 +140,7 @@ fieldset {
     }
 }
 
-@media (min-width: 769px) and (max-width: 1440px) {
+@media (min-width: 769px) {
 
     body {
         grid-template-columns: repeat(6, 1fr);
@@ -162,24 +152,16 @@ fieldset {
     body {
         grid-template-columns: repeat(12, 1fr);
     }
-}
 
-@media (max-width: 600px) {
-
-    section,
-    main,
-    form,
-    footer {
-        grid-column: 1 / -1;
+    header,
+    form {
+        grid-column: 4 / 12;
     }
-}
 
-@media (min-width: 601px) and (max-width: 1440px) {
-
+    nav,
     section,
     main,
-    form,
     footer {
-        grid-column: 1 / -1;
+        grid-column: 2 / 12;
     }
 }
