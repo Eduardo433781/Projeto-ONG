@@ -49,6 +49,46 @@ fieldset {
     margin-bottom: 20px;
 }
 
+button {
+    background-color: #333;
+    color: aliceblue;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+    box-shadow: 0   4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+    outline: 2px solid #90caf9;
+    outline-offset: 2px;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+input:valid {
+    border: 2px solid green;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
 .info-container {
     display: flex;
     flex-direction: column;
