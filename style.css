@@ -21,20 +21,32 @@ body {
     grid-template-columns: repeat(12, 1fr);
 }
 
+header {
+    grid-column: 4 / 12;
+}
+
 section {
-    grid-column: 1 / 12;
+    grid-column: 2 / 12;
 }
 
 main {
-    grid-column: 1 / 12;
+    grid-column: 2 / 12;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
 }
 
 form {
-    grid-column: 1 / 12;
+    grid-column: 4 / 12;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 footer {
-    grid-column: 1 / 12;
+    grid-column: 2 / 12;
 }
 
 @media (max-width: 768px) {
@@ -73,4 +85,11 @@ footer {
     footer {
         grid-column: 1 / -1;
     }
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
