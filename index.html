@@ -1,108 +1,178 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONG Esperança</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça a ONG Esperança e faça seu cadastro.">
+  <title>ONG Esperança</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <img src="https://imgs.search.brave.com/j5UBD54NGYMBsyG53NgdkB3SNS0GatUQK7FaXCIYXiM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbnN0/aXR1dG9yZWFjYW8u/b3JnLmJyL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIxLzA1L1F1/YWlzLWFzLWRpZmVy/ZW5jYXMtZW50cmUt/T05HLWFzc29jaWFj/YW8tZS1mdW5kYWNh/by1QYXJhLXF1YWwt/ZGVsYXMtdm9jZS1w/b2RlLWNvbnRyaWJ1/aXIuanBn"
-            alt="Logo da ONG Esperança">
-        <h1>ONG Esperança</h1>
-    </header>
-    <nav class="navbar">
-        <ul class="menu">
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Missão</a></li>
-            <li><a href="#">Valores</a></li>
-            <li><a href="#">Cadastro</a></li>
-        </ul>
-    </nav>
+  <header class="hero">
+    <img
+      class="hero__image"
+      src="https://imgs.search.brave.com/j5UBD54NGYMBsyG53NgdkB3SNS0GatUQK7FaXCIYXiM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbnN0/aXR1dG9yZWFjYW8u/b3JnLmJyL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIxLzA1L1F1/YWlzLWFzLWRpZmVy/ZW5jYXMtZW50cmUt/T05HLWFzc29jaWFj/YW8tZS1mdW5kYWNh/by1QYXJhLXF1YWwt/ZGVsYXMtdm9jZS1w/b2RlLWNvbnRyaWJ1/aXIuanBn"
+      alt="Voluntários em uma ação comunitária"
+    >
+    <h1>ONG Esperança</h1>
+  </header>
 
-    <section class="info-container">
-        <h2>Sobre Nós</h2>
-        <p>A ONG Esperança é dedicada a ajudar comunidades carentes, oferecendo suporte educacional, social e de saúde.
-        </p>
+  <nav class="navbar" aria-label="Navegação principal">
+    <ul class="menu">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre nós</a></li>
+      <li><a href="#missao">Missão</a></li>
+      <li><a href="#valores">Valores</a></li>
+      <li><a href="#cadastro">Cadastro</a></li>
+    </ul>
+  </nav>
+
+  <main id="inicio">
+    <section class="info-container" id="sobre" aria-labelledby="titulo-sobre">
+      <h2 id="titulo-sobre">Sobre nós</h2>
+      <p>
+        A ONG Esperança é dedicada a ajudar comunidades carentes, oferecendo
+        suporte educacional, social e de saúde.
+      </p>
     </section>
 
-    <main class="info-container">
-        <h2>missão</h2>
-        <p>Nossa missão é promover a inclusão social e melhorar a qualidade de vida das pessoas</p>
-        <h3>Valores</h3>
-        <ul>
-            <li>Solidariedade</li>
-            <li>Transparência</li>
-            <li>Compromisso</li>
-            <li>Respeito</li>
-        </ul>
-    </main>
+    <section class="info-container" id="missao" aria-labelledby="titulo-missao">
+      <h2 id="titulo-missao">Missão</h2>
+      <p>
+        Nossa missão é promover a inclusão social e melhorar a qualidade de vida
+        das pessoas.
+      </p>
+    </section>
 
-    <form>
+    <section class="info-container" id="valores" aria-labelledby="titulo-valores">
+      <h2 id="titulo-valores">Valores</h2>
+      <ul class="values-list">
+        <li>Solidariedade</li>
+        <li>Transparência</li>
+        <li>Compromisso</li>
+        <li>Respeito</li>
+      </ul>
+    </section>
+
+    <section class="info-container" id="cadastro" aria-labelledby="titulo-cadastro">
+      <h2 id="titulo-cadastro">Cadastro</h2>
+
+      <form class="registration-form" action="#" method="post">
         <fieldset>
-            <legend>Dados pessoais</legend>
-            <label for="nome">Nome completo:</label>
-            <input type="text" id="nome" name="nome" required><br><br>
+          <legend>Dados pessoais</legend>
 
-            <label for="email">email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+          <div class="form-field">
+            <label for="nome">Nome completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              autocomplete="name"
+              required
+            >
+          </div>
 
-            <label for="data-nascimento">Data de nascimento:</label><br>
-            <input type="date" id="data-nascimento" name="data-nascimento" required><br><br>
-            <button type="submit">Enviar</button>
+          <div class="form-field">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="data-nascimento">Data de nascimento</label>
+            <input
+              type="date"
+              id="data-nascimento"
+              name="data-nascimento"
+              autocomplete="bday"
+              required
+            >
+          </div>
         </fieldset>
 
         <fieldset>
-            <legend>Endereço</legend>
-            <label for="CEP">CEP:</label>
-            <input pattern="[0-9]{5}-[0-9]{3}" type="text" id="CEP" name="CEP" required><br><br>
+          <legend>Endereço</legend>
 
-            <label for="cidade">Cidade:</label>
-            <input pattern="[A-Za-z\s]+" type="text" id="cidade" name="cidade" required><br><br>
+          <div class="form-field">
+            <label for="cep">CEP</label>
+            <input
+              type="text"
+              id="cep"
+              name="cep"
+              inputmode="numeric"
+              autocomplete="postal-code"
+              pattern="[0-9]{5}-?[0-9]{3}"
+              placeholder="00000-000"
+              aria-describedby="cep-ajuda"
+              required
+            >
+            <small id="cep-ajuda">Digite oito números, com ou sem hífen.</small>
+          </div>
 
-            <label for="estado">Estado:</label>
-            <select id="estado" name="estado" required>
-                <option value="">Selecione</option>
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espírito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-            </select><br><br>
-            <button type="submit">Enviar</button>
+          <div class="form-field">
+            <label for="cidade">Cidade</label>
+            <input
+              type="text"
+              id="cidade"
+              name="cidade"
+              autocomplete="address-level2"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="estado">Estado</label>
+            <select
+              id="estado"
+              name="estado"
+              autocomplete="address-level1"
+              required
+            >
+              <option value="">Selecione</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </div>
         </fieldset>
 
-    </form>
+        <button type="submit">Enviar cadastro</button>
+      </form>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2024 ONG Esperança. Todos os direitos reservados.</p>
-    </footer>
+  <footer class="footer">
+    <p>&copy; 2026 ONG Esperança. Todos os direitos reservados.</p>
+  </footer>
 </body>
-
 </html>
