@@ -44,8 +44,9 @@ body {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-.navbar {
-  background-color: #263b36;
+.navbar a.active {
+  background-color: #405750;
+  text-decoration: underline;
 }
 
 .menu {
