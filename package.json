@@ -1,0 +1,30 @@
+{
+  "name": "projetos-faculdade",
+  "version": "1.0.0",
+  "description": "Este projeto consiste no desenvolvimento de um **site institucional para a ONG Esperança**, criado como parte dos meus estudos e práticas em **desenvolvimento web**.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eduardo433781/Projetos-faculdade.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Eduardo433781/Projetos-faculdade/issues"
+  },
+  "homepage": "https://github.com/Eduardo433781/Projetos-faculdade#readme",
+  "script": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^8.3.4"
+  }
+}
